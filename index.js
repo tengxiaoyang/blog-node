@@ -25,7 +25,7 @@ const getPostData = req => {
       resolve(JSON.parse(postData))
     })
   })
-  return Promise
+  return promise
 }
 
 const serverHandle = (req, res) => {
