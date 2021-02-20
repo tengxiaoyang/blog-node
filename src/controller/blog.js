@@ -20,11 +20,23 @@ const getList = (author, keyword) => {
       title: '2标题123456789',
       content: '2内容123456789123456789',
       createTime: 1613723676899,
-      author: 'qinqin'
+      author: 'lisi'
     },
   ]
 }
 
+const getDetail = id => {
+  // 先返回假数据
+  return {
+    id: 1,
+    title: '1标题123456789',
+    content: '1内容123456789123456789',
+    createTime: 1613723656773,
+    author: 'zhangsan'
+  }
+}
+
 module.exports = {
-  getList
+  getList,
+  getDetail
 }
