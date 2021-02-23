@@ -1,3 +1,5 @@
+const { exec } = require('../db/mysql')
+
 const getList = (author, keyword) => {
   // 先返回格式正确的假3数据
   return [
