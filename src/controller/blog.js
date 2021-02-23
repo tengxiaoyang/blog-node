@@ -1,7 +1,19 @@
 const { exec } = require('../db/mysql')
 
 const getList = (author, keyword) => {
-  // 先返回格式正确的假3数据
+  // 定义sql语句
+  let sql = `select * from blogs where 1=1 `
+  if (author) {
+    sql += `and author='${author}' `
+  }
+  if (keyword) {
+    sql += `and title like '%${keyword}%' `
+  }
+  sql += `order by createtime desc;`
+
+  return exec(sql) // 返回的是一个Promise对象
+
+  // 先返回格式正确的假数据
   return [
     {
       id: 1,
