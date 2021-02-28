@@ -45,7 +45,7 @@ const handleUserRouter = (req, res) => {
       return Promise.resolve(
         new SuccessModel(
           {
-            username: req.session.username
+            session: req.session
           }
         )
       ) 
