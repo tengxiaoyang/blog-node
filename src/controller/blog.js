@@ -11,7 +11,7 @@ const getList = (author, keyword) => {
   }
   sql += `order by createtime desc;`
 
-  return exec(sql) // 返回的是一个Promise对象
+  return exec(sql) // 返回的是一个Promise实例
 
   // 先返回格式正确的假数据
   // return [
@@ -44,7 +44,7 @@ const getDetail = id => {
   const sql = `select * from blogs where id='${id}'`
   return exec(sql).then(rows => {
     return rows[0]
-  }) // 返回的是一个Promise对象
+  }) // 返回的是一个Promise实例
 
   // 先返回假数据
   // return {
