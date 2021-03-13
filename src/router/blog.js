@@ -41,7 +41,7 @@ const handleBlogRouter = (req, res) => {
     const result = getList(author, keyword)
     return result.then(listData => {
       return new SuccessModel(listData)
-    }) // mysql.js里的resolve(result)中的result就是listData；这里返回的也是一个Promise实例
+    }) // mysql.js里的resolve(result)中的result就是listData；这里返回的也是一个Promise对象
   }
 
   // 获取博客详情
